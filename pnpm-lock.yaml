@@ -1,6 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@leva-ui/plugin-bezier': ^0.9.12
+  '@leva-ui/plugin-spring': ^0.9.12
   '@math.gl/core': ^3.4.3
   '@react-three/drei': ^7.0.6
   '@react-three/fiber': ^7.0.3
@@ -29,6 +31,8 @@ specifiers:
   vite: ^2.4.1
 
 dependencies:
+  '@leva-ui/plugin-bezier': 0.9.12_dc38fb4c8b7ff51d8f6be13fd938f2ad
+  '@leva-ui/plugin-spring': 0.9.12_dc38fb4c8b7ff51d8f6be13fd938f2ad
   '@math.gl/core': 3.4.3
   '@react-three/fiber': 7.0.3_868f0b73e409f9ea26b253008ada889d
   '@theoparis/esbuild-plugins': github.com/creepinson/esbuild-plugins/121d05eacf4c9a41b08292f9bca162aeffe6a2c6_esbuild@0.12.15
@@ -40,7 +44,7 @@ dependencies:
 
 devDependencies:
   '@react-three/drei': 7.0.6_67febfad9156412e25e46604ca308a96
-  '@theoparis/eslint-config': github.com/creepinson/eslint-config/91bde97443e0e1acaedf060ac0d43840565cf9d1
+  '@theoparis/eslint-config': github.com/creepinson/eslint-config/7032c8bc841a9423872e8ebdce942e61b7b700e3
   '@types/node': 16.0.1
   '@types/react': 17.0.14
   '@types/react-dom': 17.0.9
@@ -358,6 +362,32 @@ packages:
     resolution: {integrity: sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==}
     dev: true
 
+  /@leva-ui/plugin-bezier/0.9.12_dc38fb4c8b7ff51d8f6be13fd938f2ad:
+    resolution: {integrity: sha512-r10is8BMz4uS/QVscXcFZOOwCOvHd1+IlToxeIFSxtDJjUDyV5LGXp8zOvzCJfI0huEGipkP4FadOTuZbsKr/A==}
+    peerDependencies:
+      leva: '>=0.9.12'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      leva: 0.9.13_react-dom@17.0.2+react@17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-use-measure: 2.0.4_react-dom@17.0.2+react@17.0.2
+    dev: false
+
+  /@leva-ui/plugin-spring/0.9.12_dc38fb4c8b7ff51d8f6be13fd938f2ad:
+    resolution: {integrity: sha512-hWM1Cmwrz/4tC/hoU/V+SGNz6eXPPY003zFNoW6ny+uFlSr0CMdREFGv4KirUM17biVvRuFVqabG0j6RgWVRXw==}
+    peerDependencies:
+      leva: '>=0.9.12'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@react-spring/web': 9.2.3_react-dom@17.0.2+react@17.0.2
+      leva: 0.9.13_react-dom@17.0.2+react@17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
   /@math.gl/core/3.4.3:
     resolution: {integrity: sha512-gWAuVkNi8cS4+ejZnhkMjTcKHFSYUSCTSXyCY3ReLIOknyy1QEucecOCyl3xpubRwCzPgCOiQ0yFvEdIFPpH6Q==}
     dependencies:
@@ -621,6 +651,60 @@ packages:
     resolution: {integrity: sha512-gXw171KbjyttA7K1DRIvPguLmKsg8raitB67MIcsdZwcquy+a1O2w3xY21NIKEqGhJwqJkECPUmMJDXgMNYuAg==}
     dependencies:
       '@babel/runtime': 7.14.6
+    dev: false
+
+  /@react-spring/animated/9.2.3_react@17.0.2:
+    resolution: {integrity: sha512-xxYOxxrk4r+yy218lVnkR027GXGvHcadDnnXRW0l6atcL+1AGYwimMwIuvzlvnsVnyoK0YUABEeGjk9ENOrVMQ==}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0
+    dependencies:
+      '@react-spring/shared': 9.2.3_react@17.0.2
+      '@react-spring/types': 9.2.3
+      react: 17.0.2
+    dev: false
+
+  /@react-spring/core/9.2.3_react@17.0.2:
+    resolution: {integrity: sha512-8qJbj0xjjoYGVqdmNd2bVaFzKSAwrMVLweHkaYJiTY6p0g7LhSdt5KSl1MjYA4Rj6S4wO1KgefAPK6mH6MtGtA==}
+    requiresBuild: true
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0
+    dependencies:
+      '@react-spring/animated': 9.2.3_react@17.0.2
+      '@react-spring/shared': 9.2.3_react@17.0.2
+      '@react-spring/types': 9.2.3
+      react: 17.0.2
+    dev: false
+
+  /@react-spring/rafz/9.2.3:
+    resolution: {integrity: sha512-ThBI3HWp1Y82uRSFVpoykwgM3M9s3SJD6ilKKp9C2OTPcGhWiRGt1IMjzKPwB+F1NX3psbPTt30Bev8WzA/DQQ==}
+    dev: false
+
+  /@react-spring/shared/9.2.3_react@17.0.2:
+    resolution: {integrity: sha512-MehdmKao1oUAwSEJo8BXOz1OGgsSav/dimD1Vz920hirShj9s/I4zKnWtkdK92xQ4n35D/xD3hATHkXbt/WSvg==}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0
+    dependencies:
+      '@react-spring/rafz': 9.2.3
+      '@react-spring/types': 9.2.3
+      react: 17.0.2
+    dev: false
+
+  /@react-spring/types/9.2.3:
+    resolution: {integrity: sha512-G7AWUJavwsvvvprnYmqUXE5N1XKINktc8V72ipvkFTE3DD3GApYpX/ORNmieJljKJYvBSBzpRSIzk2qELUs30Q==}
+    dev: false
+
+  /@react-spring/web/9.2.3_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-dWRcgVDbO2UI9I03n/HVmCx9tY++Na+RwRzkzXv3E53BcFsjvnWGArnpj+xE/XgXiaII3ep2RmUj5jyYoukqGg==}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0
+      react-dom: ^16.8.0  || ^17.0.0
+    dependencies:
+      '@react-spring/animated': 9.2.3_react@17.0.2
+      '@react-spring/core': 9.2.3_react@17.0.2
+      '@react-spring/shared': 9.2.3_react@17.0.2
+      '@react-spring/types': 9.2.3
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /@react-three/drei/7.0.6_67febfad9156412e25e46604ca308a96:
@@ -2258,6 +2342,14 @@ packages:
       has: 1.0.3
       jsx-ast-utils: 3.2.0
       language-tags: 1.0.5
+    dev: true
+
+  /eslint-plugin-prefer-arrow/1.2.3_eslint@7.30.0:
+    resolution: {integrity: sha512-J9I5PKCOJretVuiZRGvPQxCbllxGAV/viI20JO3LYblAodofBxyMnZAJ+WGeClHgANnSJberTNoFWWjrWKBuXQ==}
+    peerDependencies:
+      eslint: '>=2.0.0'
+    dependencies:
+      eslint: 7.30.0
     dev: true
 
   /eslint-plugin-prettier/3.4.0_0470f3bcd018a045da11d0bbb868d6c6:
@@ -5498,8 +5590,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  github.com/creepinson/eslint-config/91bde97443e0e1acaedf060ac0d43840565cf9d1:
-    resolution: {tarball: https://codeload.github.com/creepinson/eslint-config/tar.gz/91bde97443e0e1acaedf060ac0d43840565cf9d1}
+  github.com/creepinson/eslint-config/7032c8bc841a9423872e8ebdce942e61b7b700e3:
+    resolution: {tarball: https://codeload.github.com/creepinson/eslint-config/tar.gz/7032c8bc841a9423872e8ebdce942e61b7b700e3}
     name: '@theoparis/eslint-config'
     version: 1.0.2
     dependencies:
@@ -5509,6 +5601,7 @@ packages:
       eslint-config-prettier: 8.3.0_eslint@7.30.0
       eslint-plugin-import: 2.23.4_eslint@7.30.0
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.30.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.30.0
       eslint-plugin-prettier: 3.4.0_0470f3bcd018a045da11d0bbb868d6c6
       eslint-plugin-react: 7.24.0_eslint@7.30.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.30.0

@@ -1,4 +1,7 @@
 import { Vector3 } from "@math.gl/core";
+import { Optimization, TerrainOptions } from "./util/basicTypes";
+import { EaseInWeak, Linear } from "./util/core";
+import { DiamondSquare } from "./util/generators";
 
 export interface Cell {
     alive: boolean;
@@ -7,7 +10,7 @@ export interface Cell {
 }
 
 export interface CellFn {
-    (d: number, i: number): Cell;
+    (pos: Vector3): Cell;
 }
 
 export interface IWorld {
@@ -17,9 +20,29 @@ export interface IWorld {
     seed: number;
 }
 
-export class World implements IWorld {
+export const defaultTerrainOptions: TerrainOptions = {
+    after: undefined,
+    easing: Linear,
+    heightmap: DiamondSquare,
+    maxHeight: 100,
+    minHeight: -100,
+    optimization: Optimization.NONE,
+    frequency: 2.5,
+    steps: 1,
+    stretch: true,
+    turbulent: false,
+    useBufferGeometry: false,
+    widthSegments: 63,
+    width: 100,
+    heightSegments: 63,
+    height: 100
+};
+
+export class WorldSettings {
+    terrain: Partial<TerrainOptions> = defaultTerrainOptions;
+}
+
+export class World {
     data: Cell[] = [];
-    noiseOctaves = 5;
-    seed = 20;
-    size: Vector3 = new Vector3(20, 25, 20);
+    settings = new WorldSettings();
 }

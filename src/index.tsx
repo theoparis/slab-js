@@ -1,8 +1,9 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import { WorldRenderer } from "./components/world";
 import { OrbitControls } from "@react-three/drei";
+import { Terrain } from "./components/terrain";
+import { defaultTerrainOptions } from "./world";
 
 ReactDOM.render(
     <div
@@ -14,8 +15,8 @@ ReactDOM.render(
     >
         <Canvas onCreated={(state) => state.gl.setClearColor("black")}>
             <ambientLight />
-            <pointLight position={[10, 10, 10]} />
-            <WorldRenderer />
+            <pointLight position={[0, 1, 0]} />
+            <Terrain options={defaultTerrainOptions} />
             <OrbitControls />
         </Canvas>
     </div>,

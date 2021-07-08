@@ -9,6 +9,7 @@
         "check-types": "tsc",
         "dev": "cross-env NODE_ENV=development vite",
         "build": "cross-env NODE_ENV=production vite build",
+        "lint": "eslint src/**/*.{ts,tsx} --fix",
         "start": "sirv -D -c dist"
     },
     "keywords": [],
@@ -35,6 +36,8 @@
         "vite": "^2.4.1"
     },
     "dependencies": {
+        "@leva-ui/plugin-bezier": "^0.9.12",
+        "@leva-ui/plugin-spring": "^0.9.12",
         "@math.gl/core": "^3.4.3",
         "@react-three/fiber": "^7.0.3",
         "@theoparis/esbuild-plugins": "github:creepinson/esbuild-plugins#theo-patch",

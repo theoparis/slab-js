@@ -1,7 +1,7 @@
 import { Camera } from "three";
 
 export interface TPCParams {
-    camera: Camera
+    camera: Camera;
 }
 
 export class ThirdPersonCamera {
