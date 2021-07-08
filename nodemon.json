@@ -1,0 +1,9 @@
+{
+    "verbose": true,
+    "exec": "npm run check-types && npm run build",
+    "watch": ["src", "babel.config.cjs"],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js,ts,json"
+}

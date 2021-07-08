@@ -1,0 +1,47 @@
+{
+    "name": "p5-test",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "exports": "./src/index.js",
+    "main": "./src/index.js",
+    "scripts": {
+        "check-types": "tsc",
+        "dev": "cross-env NODE_ENV=development vite",
+        "build": "cross-env NODE_ENV=production vite build",
+        "start": "sirv -D -c dist"
+    },
+    "keywords": [],
+    "author": "Theo Paris",
+    "license": "MIT",
+    "devDependencies": {
+        "@react-three/drei": "^7.0.6",
+        "@theoparis/eslint-config": "github:creepinson/eslint-config#update",
+        "@types/node": "^16.0.1",
+        "@types/react": "^17.0.14",
+        "@types/react-dom": "^17.0.9",
+        "@types/three": "^0.130.0",
+        "@vitejs/plugin-react-refresh": "^1.3.5",
+        "browserify": "^17.0.0",
+        "cross-env": "^7.0.3",
+        "esbuild": "^0.12.15",
+        "esbuild-plugin-wasm": "^1.0.0",
+        "eslint": "^7.30.0",
+        "nodemon": "^2.0.9",
+        "prettier": "^2.3.2",
+        "sirv-cli": "^1.0.12",
+        "tsify": "^5.0.4",
+        "typescript": "^4.3.5",
+        "vite": "^2.4.1"
+    },
+    "dependencies": {
+        "@math.gl/core": "^3.4.3",
+        "@react-three/fiber": "^7.0.3",
+        "@theoparis/esbuild-plugins": "github:creepinson/esbuild-plugins#theo-patch",
+        "fast-simplex-noise": "^4.0.0",
+        "leva": "^0.9.13",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "three": "github:mrdoob/three.js"
+    }
+}
